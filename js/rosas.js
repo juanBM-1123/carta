@@ -1,6 +1,11 @@
 let block = document.getElementsByClassName("block");
 let carta = document.getElementById("sobre");
-
+let boxImg = document.getElementsByClassName("box-img")[0];
+let fuegosArtificiales = document.getElementsByClassName("fuegos-artificiales")[0];
+let footerMensaje = document.getElementById("mensaje");
+let texto = "Redactando su carta...";
+let i = 0;
+let speed = 75;
 
 function obtenerNumeroAleatorio(max){
  return Math.floor(Math.random()*max);
@@ -54,6 +59,30 @@ carta.addEventListener(
         crearImagenes("img/rosaNeon.png");
         generate();
         setTimeout(eliminarImagenes("rosa"),2000);
+    }
+);
+
+function typeWriter(){
+    if(i < texto.length){
+        footerMensaje.innerHTML+= texto.charAt(i);
+        i++;
+        setTimeout(typeWriter,speed);
+    }
+}
+function redireccionarACarta(){
+    if(!(i < texto.length)){
+        location.href = "carta.html"
+    }
+    setTimeout(redireccionarACarta,20);
+}
+
+boxImg.addEventListener(
+    "click",()=>{
+        carta.style.display = "none";
+        fuegosArtificiales.style.display = "block";
+        footerMensaje.style.display = "block";
+        setTimeout(typeWriter,speed);
+        setTimeout(redireccionarACarta);
     }
 );
 

@@ -29,6 +29,15 @@ section{
     margin:5% auto;
     border-radius: 10px;
 }
+footer{
+    display: none;
+    text-align: center;
+    font-family: Caveat;
+    font-size: 3em;
+    color:  #a70eb5;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}   
 .box-img{
     position: relative;
     overflow: hidden;
@@ -78,6 +87,8 @@ position: relative;
 z-index: 100;
 width: 500px;
 height: 400px;
+left: 4.5%;
+top:5%;
 animation: heartbeat 1s infinite;
 }
 
@@ -96,10 +107,12 @@ animation: heartbeat 1s infinite;
     height: 350px;
     /*z-index:-999px;*/
 }
-.emoticon_diablito{
-    position: relative;
-    width: 75px;
-    height: 75px;
+.fuegos-artificiales{
+position: relative;
+z-index: 100;
+width: 500px;
+height: 400px;
+display: none;
 }
 
 @keyframes heartbeat{
