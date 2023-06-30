@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+background-color:   #202020 ;
+}
+
+main{
+    position: relative;
+}
+
+header{
+    font-family: Caveat;
+    font-size: 3em;
+    color:  #a70eb5;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+article{
+    margin: 0px auto;
+}
+section{
+    width: 30%;
+    margin:5% auto;
+    border-radius: 10px;
+}
+.box-img{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    transition: 1s;
+    text-align: center;
+}
+
+.box-img::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 400%;
+    background-color: #d409e6;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+}
+.box-img:hover::before{
+width: 120%;
+}
+
+.box-img::after{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background:#202020;
+    opacity: 1;
+    transition: 0.5px;
+}
+
+.box-img:hover::after{
+    background: #d409e6;
+}
+
+.box-img:hover{
+    background-color:  #d409e6;
+    box-shadow: 0 0 10px #d409e6,
+    0 0 30px #d409e6,
+    0 0 60px #d409e6,
+    0 0 100px #d409e6;
+}
+.sobre{
+position: relative;
+z-index: 100;
+width: 500px;
+height: 400px;
+animation: heartbeat 1s infinite;
+}
+
+.sobre:hover{
+    cursor: pointer;
+}
+
+.block{
+    position: absolute;
+    z-index: 60px;
+}
+
+.rosa{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    /*z-index:-999px;*/
+}
+.emoticon_diablito{
+    position: relative;
+    width: 75px;
+    height: 75px;
+}
+
+@keyframes heartbeat{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes neon {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+  }
+
+  @keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+  }
