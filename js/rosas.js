@@ -68,21 +68,18 @@ function typeWriter(){
         i++;
         setTimeout(typeWriter,speed);
     }
-}
-function redireccionarACarta(){
-    if(!(i < texto.length)){
-        location.href = "carta.html"
+    else{
+        location.href = "carta.html";
     }
-    setTimeout(redireccionarACarta,20);
 }
+
 
 boxImg.addEventListener(
     "click",()=>{
         carta.style.display = "none";
-        fuegosArtificiales.style.display = "block";
+        //fuegosArtificiales.style.display = "block";
         footerMensaje.style.display = "block";
         setTimeout(typeWriter,speed);
-        setTimeout(redireccionarACarta);
     }
 );
 

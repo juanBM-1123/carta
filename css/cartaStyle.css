@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+        background-color: #202020;
+}
+
+.contenido-carta{
+    display: block;
+    position: relative;
+    z-index: 100;
+    color: #ff00de;
+    font-family: Caveat;
+    font-size: 3em;
+    text-align: justify;
+    padding: 10px;
+}
+
+.contenido-carta:hover{
+  color: #202020;
+  cursor:pointer;
+}
+
+
+@keyframes neon {
+    0% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+  }
